@@ -2,13 +2,23 @@
 
 ### 搭建步骤
 
+> 这教程确实奇怪，不过我找不到其他不报错的方法
+
 1. 注册 replit.com
 
-2. 引入此项目 [![Run on Replit](https://replit.com/badge/github/zkeq/Busuanzi_backend_self)](https://replit.com/github/zkeq/Busuanzi_backend_self)
+2. 重要：创建一个新项目！
+
+3. 重要：选择模板为 flask ！
+
+4. 重要：点击运行，查看 demo 是否正常运行！(正常运行即可进行下一步)
+
+5. 分别创建文件 `pv.py` `uv.py` `main.py` `get_before_data.py` 和文件夹 `ips`
+
+6. 复制本项目的文件到上一步创建的文件中
 
 3. 在 white_list.json 中添加你的域名白名单
 
-4. 点击 `RUN` 运行
+4. 点击 `RUN` 运行再次运行（即成功！）
 
 5. 将 `不蒜子` 官网提供的 `js` 代码里面的网址，改成你的
 
