@@ -12,7 +12,7 @@
 
 4. 重要：点击运行，查看 demo 是否正常运行！(正常运行即可进行下一步)
 
-5. 分别创建文件 `pv.py` `uv.py` `main.py` `get_before_data.py` 和文件夹 `ips`
+5. 分别创建文件 `pv.py` `uv.py` `main.py` `get_before_data.py` `white_list.json` 和文件夹 `ips`
 
 6. 复制本项目的文件到上一步创建的文件中
 
