@@ -1,6 +1,5 @@
 # coding:utf-8
 import uvicorn
-from typing import Optional
 from fastapi import FastAPI, Request, Header
 from fastapi.responses import HTMLResponse
 from urllib.parse import urlparse
