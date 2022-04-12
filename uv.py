@@ -9,13 +9,11 @@ def ip_in_and_conter_out(site_name, ip):
   file_name = "ips/" + site_name + ".json"
   if not os.path.exists(file_name):
     with open(file_name, "w") as f:
-      f.write("{}")
+      f.write("[]")
   with open(file_name, 'r+', encoding='utf-8') as f:
       data = json.load(f)
-  if ip not in data.keys():
-    data[ip] = 1
-  else:
-    data[ip] += 1
+  if ip not in data:
+    data.append(ip)
   counter = len(data) + db[site_name]['uv']
   with open(file_name, 'w', encoding='utf-8') as f:
       f.write(json.dumps(data))
