@@ -14,13 +14,13 @@
 
 5. 分别创建文件 `pv.py` `uv.py` `main.py` `get_before_data.py` `white_list.json` 和文件夹 `ips`
 
-6. 复制本项目的文件到上一步创建的文件中
+6. 复制本项目的文件到上一步创建的文件中（复制上一步提及的就可）
 
-3. 在 white_list.json 中添加你的域名白名单
+7. 在 `white_list.json` 中添加你的域名白名单
 
-4. 点击 `RUN` 运行再次运行（即成功！）
+8. 点击 `RUN` 运行再次运行（即成功！）
 
-5. 将 `不蒜子` 官网提供的 `js` 代码里面的网址，改成你的
+9. 将 `不蒜子` 官网提供的 `js` 代码里面的网址，改成你的
 
 ```
 https://busuanzi.ibruce.info/busuanzi
@@ -29,7 +29,7 @@ https://busuanzi.ibruce.info/busuanzi
 https://counter.busuanzi.icodeq.com
 ```
 
-6. 将第五步替换后的 `js` 代码替换为你正在使用的即可
+10. 将第九步替换后的 `js` 代码替换为你正在使用的即可
 
 出现下图表示安装成功！
 
