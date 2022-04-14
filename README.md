@@ -35,4 +35,5 @@ https://counter.busuanzi.icodeq.com
 
 出现下图表示安装成功！
 
-![1](http://pic.rmb.bdstatic.com/bjh/7fb1645befad5bbbff33a6578eef0a50.png)
+
+![7fb1645befad5bbbff33a6578eef0a50](https://user-images.githubusercontent.com/62864752/163296339-168c05ad-dc10-48c8-a046-1c8e46635681.png)
