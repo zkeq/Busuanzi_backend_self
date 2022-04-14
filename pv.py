@@ -6,7 +6,6 @@ def pv(host, path):
         pv_data = db[host]
     except:
         pv_data  = {"pv": 0, "data": {"/": 0}}
-        db[host] = pv_data
     pv_data["pv"] += 1
     try:
       pv_data["data"][path] += 1
