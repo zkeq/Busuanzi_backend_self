@@ -10,7 +10,7 @@ def pv(host, path):
     try:
       pv_data["data"][path] += 1
     except:
-      pv_data["data"][path] = 0
+      pv_data["data"][path] = 1
     page_pv = pv_data["data"][path]
     site_pv = pv_data["pv"]
     db[host] = pv_data
