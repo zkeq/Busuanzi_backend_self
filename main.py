@@ -37,7 +37,7 @@ def root(request: Request,
     if not data_chose or not host:
         return '<meta http-equiv="refresh" content="0;url=https://busuanzi.icodeq.com">'
     try:
-        db[host]["uv"]
+        db[host]
     except:
         get_before_data(host)
     uv = ip_in_and_conter_out(host, client_host)
