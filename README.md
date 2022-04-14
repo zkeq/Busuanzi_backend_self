@@ -1,6 +1,8 @@
 ## 不蒜子自建后端 API
 
-> 直接用 `demo` 版本 ：https://busuanzi.icodeq.com/
+> 直接用 `demo` 版本 ：https://busuanzi.icodeq.com
+> 
+> 官网归档地址：https://github.com/zkeq/Busuanzi
 
 ### 自己搭建步骤
 
