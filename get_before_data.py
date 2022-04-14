@@ -19,7 +19,9 @@ def get_before_data(host):
     str_2_dict = eval(response.text[34:][:-13])
     site_uv = str_2_dict["site_uv"]
     site_pu = str_2_dict["site_pv"]
-    db[host] = {"pv": 0, "data": {"/": 0}}
-    db[host]["pv"] = site_pu
-    db[host]["uv"] = site_uv
+    db[host] = {
+        "pv": site_pu,
+        "uv": site_uv, 
+        "data": {"/": 1}
+        }
     print("写入新网址数据成功")
