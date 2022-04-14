@@ -27,7 +27,6 @@ def read_white_site(site):
 @app.get("/", response_class=HTMLResponse)
 def root(request: Request,
          referer: str = Header(None),
-         user_agent: str = Header(None),
          jsonpCallback: str = ""
          ):
     client_host = request.client.host
