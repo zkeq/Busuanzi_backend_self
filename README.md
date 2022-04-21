@@ -51,5 +51,5 @@ var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c){return a|
 https://counter.busuanzi.icodeq.com/?jsonpCallback=BusuanziCallback
 ```
 
-3. 将第九步替换后的 `js` 代码替换为你正在使用的即可
+3. 把你网站引入的 `busuanzi` js 链接替换为上一步改好的即可（✨
 
