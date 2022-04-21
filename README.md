@@ -4,27 +4,32 @@
 > 
 > 官网归档地址：https://github.com/zkeq/Busuanzi
 
-### 自己搭建步骤
+### 安装
 
-> 这教程确实奇怪，不过我找不到其他不报错的方法
+##### 个人版
 
-1. 注册 replit.com
+- 点击：[![Run on Replit](https://replit.com/badge/github/zkeq/Busuanzi_backend_self)](https://replit.com/github/zkeq/Busuanzi_backend_selfl)
 
-2. 重要：创建一个 `Python` 新项目！
+  本项目仅占用 50MB 内存，个人版完全够用
 
-3. 重要：选择模板为 flask ！
+##### 教育版 or 专业版
 
-4. 重要：点击运行，查看 demo 是否正常运行！(正常运行即可进行下一步)
+> 【资源额度更高，但好像无法一键导入】
 
-5. 分别创建文件 `pv.py` `uv.py` `main.py` `get_before_data.py` `white_list.json` 和文件夹 `ips`
+1. 创建新项目
 
-6. 复制本项目的文件到上一步创建的文件中（复制上一步提及的就可）
+2. 复制本项目的文件到上一步创建的项目中
 
-7. 在 `white_list.json` 中添加你的域名白名单
+出现下图表示安装成功！
 
-8. 点击 `RUN` 运行再次运行（即成功！）
 
-9. 将 `不蒜子` 官网提供的 `js` 代码里面的网址，改成你的
+![7fb1645befad5bbbff33a6578eef0a50](https://user-images.githubusercontent.com/62864752/163296339-168c05ad-dc10-48c8-a046-1c8e46635681.png)
+
+### 使用
+
+1. 在 `white_list.json` 中添加你的域名白名单
+
+2. 将 `不蒜子` 官网提供的 `js` 代码里面的网址，改成你的 **即可**
 
 
 
@@ -42,9 +47,5 @@ var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c){return a|
 https://counter.busuanzi.icodeq.com/?jsonpCallback=BusuanziCallback
 ```
 
-10. 将第九步替换后的 `js` 代码替换为你正在使用的即可
+3. 将第九步替换后的 `js` 代码替换为你正在使用的即可
 
-出现下图表示安装成功！
-
-
-![7fb1645befad5bbbff33a6578eef0a50](https://user-images.githubusercontent.com/62864752/163296339-168c05ad-dc10-48c8-a046-1c8e46635681.png)
