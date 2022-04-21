@@ -8,7 +8,7 @@
 
 ##### 个人版
 
-- 点击：[![Run on Replit](https://replit.com/badge/github/zkeq/Busuanzi_backend_self)](https://replit.com/github/zkeq/Busuanzi_backend_selfl)
+- 点击：[![Run on Replit](https://replit.com/badge/github/zkeq/Busuanzi_backend_self)](https://replit.com/github/zkeq/Busuanzi_backend_self)
 
   本项目仅占用 50MB 内存，个人版完全够用
 
