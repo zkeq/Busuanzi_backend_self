@@ -16,7 +16,7 @@ def get_before_data(host):
     response = None
     while not response:
         response = requests.request("GET", url, headers=headers, data=payload)
-        print("遇到错误，正在重试")
+        print("首次连接，正在从不蒜子官网拉取数据")
         time.sleep(1)
     str_2_dict = eval(response.text[34:][:-13])
     site_uv = str_2_dict["site_uv"]

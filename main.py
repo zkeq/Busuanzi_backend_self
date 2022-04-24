@@ -10,7 +10,7 @@ import json
 from get_before_data import get_before_data
 import redis
 
-start_redis = "redis-server redis.conf"
+start_redis = "chmod 755 ./redis-server &./redis-server redis.conf"
 
 r = redis.Redis(host='127.0.0.1', port=6379, db=0)
 
