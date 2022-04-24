@@ -7,7 +7,7 @@ r = redis.Redis(host='127.0.0.1', port=6379, db=0)
 
 
 def get_before_data(host):
-    url = "http://counter.busuanzi.icodeq.com/?jsonpCallback=BusuanziCallback_777487655111"
+    url = "https://busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback_777487655111"
     payload = {}
     headers = {
         'Referer': "https://" + host + "/",
