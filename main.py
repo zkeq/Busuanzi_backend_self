@@ -47,6 +47,6 @@ def root(request: Request,
 
 if __name__ == "__main__":
     print("start redis")
-    # subprocess.Popen(start_redis, shell=True)
+    subprocess.Popen(start_redis, shell=True)
     print("start uvicorn")
     uvicorn.run("main:app", host="0.0.0.0", port=8080, log_level="info", proxy_headers=True, forwarded_allow_ips="*")
