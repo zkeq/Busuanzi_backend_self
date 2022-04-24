@@ -1,6 +1,6 @@
 ## 不蒜子自建后端 API 🗺️
 
->  Powered by: 🚀 FastAPI + Redis ✨
+>  Powered by: 🚀 FastAPI + Redis ✨ [ ~5ms 处理一次请求 ]
 
 > 项目官网以及详情介绍 ：https://busuanzi.icodeq.com
 > 
