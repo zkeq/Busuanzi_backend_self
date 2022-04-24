@@ -4,24 +4,17 @@ from fastapi import FastAPI, Request, Header
 from fastapi.responses import HTMLResponse
 from urllib.parse import urlparse
 from uv import ip_in_and_conter_out
-from get_before_data import get_before_data
-from replit import db
-
-keys = db.keys()
 from pv import pv
+import subprocess
 import json
+from get_before_data import get_before_data
+import redis
+
+start_redis = "redis-server redis.conf"
+
+r = redis.Redis(host='127.0.0.1', port=6379, db=0)
 
 app = FastAPI(docs_url=None, redoc_url=None)
-
-
-def read_white_site(site):
-    print("来路:", site)
-    with open("white_list.json", 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    if site in data:
-        return True
-    else:
-        return False
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -33,14 +26,13 @@ def root(request: Request,
     url_res = urlparse(referer)
     host = url_res.netloc
     path = url_res.path
-    data_chose = read_white_site(host)
-    if not data_chose or not host:
-        return '<meta http-equiv="refresh" content="0;url=https://busuanzi.icodeq.com">'
-    try:
-        db[host]
-    except:
-        get_before_data(host)
-    uv = ip_in_and_conter_out(host, client_host)
+    site_uv_before = r.get("live_site:%s" % host)
+    if not site_uv_before:
+        site_uv_before = get_before_data(host)
+    else:
+        site_uv_before = int(site_uv_before.decode())
+    print("site_uv_before:", site_uv_before)
+    uv = ip_in_and_conter_out(host, client_host) + site_uv_before
     page_pv, site_pv = pv(host, path)
     dict_data = {
         "site_uv": uv,
@@ -54,4 +46,7 @@ def root(request: Request,
 
 
 if __name__ == "__main__":
+    print("start redis")
+    # subprocess.Popen(start_redis, shell=True)
+    print("start uvicorn")
     uvicorn.run("main:app", host="0.0.0.0", port=8080, log_level="info", proxy_headers=True, forwarded_allow_ips="*")
