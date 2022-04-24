@@ -22,6 +22,8 @@ def root(request: Request,
          referer: str = Header(None),
          jsonpCallback: str = ""
          ):
+    if not referer:
+      return "Powered by: FastAPI + Redis"
     client_host = request.client.host
     url_res = urlparse(referer)
     host = url_res.netloc
@@ -31,7 +33,6 @@ def root(request: Request,
         site_uv_before = get_before_data(host)
     else:
         site_uv_before = int(site_uv_before.decode())
-    print("site_uv_before:", site_uv_before)
     uv = ip_in_and_conter_out(host, client_host) + site_uv_before
     page_pv, site_pv = pv(host, path)
     dict_data = {
