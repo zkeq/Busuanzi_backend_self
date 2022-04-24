@@ -1,5 +1,7 @@
 ## 不蒜子自建后端 API 🗺️
 
+>  Powered by: 🚀 FastAPI + Redis ✨
+
 > 项目官网以及详情介绍 ：https://busuanzi.icodeq.com
 > 
 > 官网归档地址：https://github.com/zkeq/Busuanzi
@@ -10,7 +12,7 @@
 
 - 点击一键部署：[![Run on Replit](https://replit.com/badge/github/zkeq/Busuanzi_backend_self)](https://replit.com/github/zkeq/Busuanzi_backend_self)
 
-  本项目仅占用 50MB 内存，个人版完全够用
+  本项目使用 Redis 做数据库， 空转占用内存大概 200M，请按需规划。
 
 - 成功导入后点击 🏃 `RUN` 按钮，即可完成安装！
 
@@ -26,7 +28,7 @@
 
 出现下图表示安装成功！~（首次会同步 busuanzi 的数据，多次尝试属于正常状态）~ :
 
-![Snipaste_2022-04-21_17-06-47](https://user-images.githubusercontent.com/62864752/164420880-919d6e6b-68b5-4d1a-b6d5-61404c8b704a.png)
+![Snipaste_2022-04-21_17-06-47](https://user-images.githubusercontent.com/62864752/164993786-8e4871a2-883e-493e-b19a-76a0d900a95c.png)
 
 
 ### 使用
