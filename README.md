@@ -1,4 +1,6 @@
-## 不蒜子自建后端 API 🗺️
+![Busuanzi_backend_self](https://socialify.git.ci/zkeq/Busuanzi_backend_self/image?font=Bitter&language=1&name=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)
+
+#### 不蒜子自建后端 API 🗺️
 
 >  Powered by: 🚀 FastAPI + Redis ✨ [ ~5ms 处理一次请求 ]
 
