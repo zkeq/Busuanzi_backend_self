@@ -1,4 +1,4 @@
-![Busuanzi_backend_self](https://socialify.git.ci/zkeq/Busuanzi_backend_self/image?font=Bitter&language=1&name=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)
+![Busuanzi_backend_self](https://socialify.git.ci/zkeq/Busuanzi_backend_self/image?description=1&font=Bitter&forks=1&language=1&name=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)
 
 #### 不蒜子自建后端 API 🗺️
 
