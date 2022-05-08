@@ -30,6 +30,8 @@ def root(request: Request,
     url_res = urlparse(referer)
     host = url_res.netloc
     path = url_res.path
+    if "index" in path:
+        path = path.split("index")[0]
     site_uv_before = r.get("live_site:%s" % host)
     if not site_uv_before:
         site_uv_before = get_before_data(host)
