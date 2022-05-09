@@ -1,14 +1,16 @@
 # coding:utf-8
+import json
+import subprocess
+from urllib.parse import urlparse
+
+import redis
 import uvicorn
 from fastapi import FastAPI, Request, Header
 from fastapi.responses import HTMLResponse
-from urllib.parse import urlparse
-from uv import ip_in_and_conter_out
-from pv import pv
-import subprocess
-import json
+
 from get_before_data import get_before_data
-import redis
+from pv import pv
+from uv import ip_in_and_conter_out
 
 chmod_redis = "chmod 755 ./redis-server"
 
@@ -25,7 +27,7 @@ def root(request: Request,
          jsonpCallback: str = ""
          ):
     if not referer:
-      return "Powered by: FastAPI + Redis"
+        return "Powered by: FastAPI + Redis"
     client_host = request.client.host
     url_res = urlparse(referer)
     host = url_res.netloc

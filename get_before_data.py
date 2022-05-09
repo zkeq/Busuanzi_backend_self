@@ -1,7 +1,8 @@
 # coding:utf-8
-import requests
-import redis
 import time
+
+import redis
+import requests
 
 r = redis.Redis(host='127.0.0.1', port=6379, db=0)
 
