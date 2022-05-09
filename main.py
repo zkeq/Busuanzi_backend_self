@@ -5,8 +5,7 @@ from urllib.parse import urlparse
 
 import redis
 import uvicorn
-from fastapi import FastAPI, Request, Header
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, Request, Header, Response
 
 from get_before_data import get_before_data
 from pv import pv
@@ -21,13 +20,13 @@ r = redis.Redis(host='127.0.0.1', port=6379, db=0)
 app = FastAPI(docs_url=None, redoc_url=None)
 
 
-@app.get("/", response_class=HTMLResponse)
+@app.get("/")
 def root(request: Request,
          referer: str = Header(None),
          jsonpCallback: str = ""
          ):
     if not referer:
-        return "Powered by: FastAPI + Redis"
+        return Response(content="Powered by: FastAPI + Redis", media_type="text/plain")
     client_host = request.client.host
     url_res = urlparse(referer)
     host = url_res.netloc
@@ -49,7 +48,7 @@ def root(request: Request,
     }
     data_str = "try{" + jsonpCallback + "(" + json.dumps(dict_data) + ");}catch(e){}"
     print(data_str)
-    return data_str
+    return Response(content=data_str, media_type="application/javascript")
 
 
 if __name__ == "__main__":
