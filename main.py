@@ -11,7 +11,9 @@ from get_before_data import get_before_data
 from pv import pv
 from uv import ip_in_and_conter_out
 
-start_redis = "redis-server redis.conf"
+chmod_redis = "chmod 755 ./redis-server"
+
+start_redis = "./redis-server redis.conf"
 
 r = redis.Redis(host='127.0.0.1', port=6379, db=0)
 
@@ -50,6 +52,8 @@ def root(request: Request,
 
 
 if __name__ == "__main__":
+    print("chmod redis")
+    subprocess.run(chmod_redis, shell=True)
     print("start redis")
     subprocess.Popen(start_redis, shell=True)
     print("start uvicorn")
