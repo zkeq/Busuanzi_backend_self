@@ -1,5 +1,4 @@
 # coding:utf-8
-import json
 import subprocess
 from urllib.parse import urlparse
 
@@ -20,15 +19,15 @@ r = redis.Redis(host='127.0.0.1', port=6379, db=0)
 app = FastAPI(docs_url=None, redoc_url=None)
 
 
-@app.get("/")
+@app.post("/")
 def root(request: Request,
-         referer: str = Header(None),
-         jsonpCallback: str = ""
-         ):
-    if not referer:
+        response: Response,
+        x_bsz_referer: str = Header(None),
+):
+    if not x_bsz_referer:
         return Response(content="Powered by: FastAPI + Redis", media_type="text/plain")
     client_host = request.client.host
-    url_res = urlparse(referer)
+    url_res = urlparse(x_bsz_referer)
     host = url_res.netloc
     path = url_res.path
     if "index" in path:
@@ -44,11 +43,26 @@ def root(request: Request,
         "site_uv": uv,
         "page_pv": page_pv,
         "site_pv": site_pv,
-        "version": 2.4
+        "version": 2.1
     }
-    data_str = "try{" + jsonpCallback + "(" + json.dumps(dict_data) + ");}catch(e){}"
-    print(data_str)
-    return Response(content=data_str, media_type="application/javascript")
+    response.headers["Content-Type"] = "application/json"
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    return dict_data
+
+
+@app.get("/")
+def root_get():
+    return Response(content="Powered by: FastAPI + Redis", media_type="text/plain")
+
+
+# 加一个option请求
+@app.options("/")
+def root_option():
+    return Response(status_code=204,headers={
+        "Access-Control-Allow-Methods": "GET,POST,HEAD,OPTIONS",
+        "Access-Control-Allow-Headers": "x-bsz-referer",
+        "Access-Control-Max-Age": "86400",
+        "Access-Control-Allow-Origin": "*"})
 
 
 if __name__ == "__main__":
