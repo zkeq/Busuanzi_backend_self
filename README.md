@@ -1,12 +1,12 @@
-[![Busuanzi_backend_self](https://socialify.git.ci/zkeq/Busuanzi_backend_self/image?description=1&font=Bitter&forks=1&language=1&logo=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F983194&name=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)](https://busuanzi.icodeq.com)
+[![Busuanzi_backend_self](https://socialify.git.ci/zkeq/Busuanzi_backend_self/image?description=1&font=Bitter&forks=1&language=1&logo=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F983194&name=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)](https://dev.busuanzi.icodeq.com)
 
 #### 不蒜子自建后端 API 🗺️
 
 >  Powered by: 🚀 FastAPI + Redis ✨ [ ~5ms 处理一次请求 ]
 
-> 项目官网以及详情介绍 ：https://busuanzi.icodeq.com
+> `DEV` 项目官网以及详情介绍 ：https://dev.busuanzi.icodeq.com
 > 
-> 官网归档地址：https://github.com/zkeq/Busuanzi
+> 官网归档地址：https://github.com/zkeq/Busuanzi/tree/dev
 
 ### 安装
 
