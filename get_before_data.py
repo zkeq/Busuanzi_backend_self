@@ -15,10 +15,14 @@ def get_before_data(host):
         'Cookie': 'busuanziId=89D15D1F66D2494F91FB315545BF9C2A'
     }
     response = None
+    TIMES = 0
     while not response:
         response = requests.request("GET", url, headers=headers, data=payload)
         print("首次连接，正在从不蒜子官网拉取数据")
+        if TIMES > 30:
+            response = 'try{BusuanziCallback_777487655111({"site_uv":0,"page_pv":0,"version":2.4,"site_pv":0});}catch(e){}'
         time.sleep(1)
+        TIMES += 1
     str_2_dict = eval(response.text[34:][:-13])
     site_uv = str_2_dict["site_uv"]
     page_pv = str_2_dict["page_pv"]
