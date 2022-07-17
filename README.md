@@ -12,7 +12,7 @@
 
 ##### 个人版
 
-- 点击一键部署：[![Run on Replit](https://replit.com/badge/github/zkeq/Busuanzi_backend_self)](https://replit.com/github/zkeq/Busuanzi_backend_self)
+- 点击一键部署：[![Run on Replit](https://replit.com/badge/github/zkeq/Busuanzi_backend_self)](https://replit.com/@zkeq/busuanzi?v=1)
 
   本项目使用 `Redis` 做数据库， 空转占用内存大概 `200M`，请按需规划。
 
